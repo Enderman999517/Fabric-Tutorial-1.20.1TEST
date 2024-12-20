@@ -5,6 +5,7 @@ import net.enderman999517.tutorialmod.item.ModItemGroups;
 import net.enderman999517.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 	}
 }
