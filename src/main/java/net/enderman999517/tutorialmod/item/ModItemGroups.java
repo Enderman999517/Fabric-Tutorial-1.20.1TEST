@@ -1,6 +1,7 @@
 package net.enderman999517.tutorialmod.item;
 
 import net.enderman999517.tutorialmod.TutorialMod;
+import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,9 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_RUBY);
 
                         entries.add(Items.DIAMOND);
+
+                        entries.add(ModBlocks.RUBY_BLOCK);
+                        entries.add(ModBlocks.RAW_RUBY_BLOCK);
 
                     }).build());
 
