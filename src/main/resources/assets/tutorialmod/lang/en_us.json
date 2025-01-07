@@ -2,12 +2,18 @@
   "item.tutorialmod.ruby": "Ruby",
   "item.tutorialmod.raw_ruby": "Raw Ruby",
 
+  "item.tutorialmod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.tutorialmod.ruby_axe": "Ruby Axe",
+  "item.tutorialmod.ruby_shovel": "Ruby Shovel",
+  "item.tutorialmod.ruby_sword": "Ruby Sword",
+  "item.tutorialmod.ruby_hoe": "Ruby Hoe",
+
   "item.tutorialmod.metal_detector": "Metal Detector",
 
   "item.tutorialmod.tomato": "Tomato",
   "item.tutorialmod.coal_briquette": "Coal Briquette",
 
-  "block.tutorialmod.sound_block": "Sound Block",
+  "item.tutorialmod.ruby_staff": "Ruby Staff",
 
   "block.tutorialmod.ruby_block": "Block of Ruby",
   "block.tutorialmod.raw_ruby_block": "Block of Raw Ruby",
@@ -26,6 +32,8 @@
   "block.tutorialmod.ruby_wall": "Ruby Wall",
   "block.tutorialmod.ruby_door": "Ruby Door",
   "block.tutorialmod.ruby_trapdoor": "Ruby Trapdoor",
+
+  "block.tutorialmod.sound_block": "Sound Block",
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground!",
 
