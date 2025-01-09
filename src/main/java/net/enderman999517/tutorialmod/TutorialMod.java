@@ -22,5 +22,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
+
+
 	}
 }

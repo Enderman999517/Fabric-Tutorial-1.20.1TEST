@@ -29,6 +29,12 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY_SWORD);
                         entries.add(ModItems.RUBY_HOE);
 
+                        //armor
+                        entries.add(ModItems.RUBY_HELMET);
+                        entries.add(ModItems.RUBY_CHESTPLATE);
+                        entries.add(ModItems.RUBY_LEGGINGS);
+                        entries.add(ModItems.RUBY_BOOTS);
+
                         //blocks
                             //ores
                             entries.add(ModBlocks.RUBY_BLOCK);
