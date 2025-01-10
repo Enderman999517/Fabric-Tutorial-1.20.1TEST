@@ -3,6 +3,9 @@ package net.enderman999517.tutorialmod;
 import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.enderman999517.tutorialmod.item.ModItemGroups;
 import net.enderman999517.tutorialmod.item.ModItems;
+import net.enderman999517.tutorialmod.util.ModCustomTrades;
+import net.enderman999517.tutorialmod.util.ModLootTableModifiers;
+import net.enderman999517.tutorialmod.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -20,6 +23,12 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModCustomTrades.registerCustomTrades();
+
+		ModVillagers.registerVillagers();
+
+		ModLootTableModifiers.modifyLootTables();
 
 		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 

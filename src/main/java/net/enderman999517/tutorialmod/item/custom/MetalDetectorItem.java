@@ -29,7 +29,7 @@ public class MetalDetectorItem extends Item {
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
 
-            for (int i = 0; i <= positionClicked.getY() +64; i++) {
+            for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState state = context.getWorld().getBlockState(positionClicked.down(i));
 
                 if(isValuableBlock(state)) {

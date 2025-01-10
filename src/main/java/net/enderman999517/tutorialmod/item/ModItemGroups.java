@@ -63,6 +63,14 @@ public class ModItemGroups {
 
                         //foods
                         entries.add(ModItems.TOMATO);
+                        entries.add(ModItems.CORN);
+
+                        //flowers
+                        entries.add(ModBlocks.DAHLIA);
+
+                        //seeds
+                        entries.add(ModItems.TOMATO_SEEDS);
+                        entries.add(ModItems.CORN_SEEDS);
 
                         //random
                         entries.add(Items.DIAMOND);

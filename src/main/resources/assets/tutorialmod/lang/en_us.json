@@ -14,9 +14,16 @@
   "item.tutorialmod.ruby_leggings": "Ruby Leggings",
   "item.tutorialmod.ruby_boots": "Ruby Boots",
 
+  "item.tutorialmod.corn": "Corn ",
+  "item.tutorialmod.corn_seeds": "Corn Seeds",
+
+  "block.tutorialmod.dahlia": "Dahlia",
+
   "item.tutorialmod.metal_detector": "Metal Detector",
 
   "item.tutorialmod.tomato": "Tomato",
+  "item.tutorialmod.tomato_seeds": "Tomato Seeds",
+
   "item.tutorialmod.coal_briquette": "Coal Briquette",
 
   "item.tutorialmod.ruby_staff": "Ruby Staff",
@@ -40,6 +47,8 @@
   "block.tutorialmod.ruby_trapdoor": "Ruby Trapdoor",
 
   "block.tutorialmod.sound_block": "Sound Block",
+
+  "entity.minecraft.villager.sound_master": "Soundmaster",
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground!",
 
