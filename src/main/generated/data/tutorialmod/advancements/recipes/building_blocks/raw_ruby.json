@@ -1,24 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ruby": {
+    "has_raw_ruby_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "tutorialmod:ruby"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_stone": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:stone"
+              "tutorialmod:raw_ruby_block"
             ]
           }
         ]
@@ -34,8 +22,7 @@
   },
   "requirements": [
     [
-      "has_stone",
-      "has_ruby",
+      "has_raw_ruby_block",
       "has_the_recipe"
     ]
   ],

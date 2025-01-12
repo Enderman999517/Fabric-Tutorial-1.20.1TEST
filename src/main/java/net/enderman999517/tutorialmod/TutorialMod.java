@@ -1,10 +1,13 @@
 package net.enderman999517.tutorialmod;
 
 import net.enderman999517.tutorialmod.block.ModBlocks;
+import net.enderman999517.tutorialmod.block.entity.ModBlockEntities;
 import net.enderman999517.tutorialmod.entity.ModEntities;
 import net.enderman999517.tutorialmod.entity.custom.PorcupineEntity;
 import net.enderman999517.tutorialmod.item.ModItemGroups;
 import net.enderman999517.tutorialmod.item.ModItems;
+import net.enderman999517.tutorialmod.recipe.ModRecipes;
+import net.enderman999517.tutorialmod.screen.ModScreenHandlers;
 import net.enderman999517.tutorialmod.sound.ModSounds;
 import net.enderman999517.tutorialmod.util.ModCustomTrades;
 import net.enderman999517.tutorialmod.util.ModLootTableModifiers;
@@ -35,6 +38,12 @@ public class TutorialMod implements ModInitializer {
 		ModSounds.registerSounds();
 
 		ModEntities.registerModEntities();
+
+		ModBlockEntities.registerBlockEntities();
+
+		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 
 		ModLootTableModifiers.modifyLootTables();
 

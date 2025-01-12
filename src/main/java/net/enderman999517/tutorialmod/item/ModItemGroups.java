@@ -78,6 +78,9 @@ public class ModItemGroups {
                         //spawn eggs
                         entries.add(ModItems.PORCUPINE_SPAWN_EGG);
 
+                        //block entities
+                        entries.add(ModBlocks.GEM_POLISHING_STATION);
+
                         //random
                         entries.add(Items.DIAMOND);
 

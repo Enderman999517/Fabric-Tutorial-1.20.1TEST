@@ -55,6 +55,9 @@ public class ModModelProvider extends FabricModelProvider {
         //flowers
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAHLIA, ModBlocks.POTTED_DAHLIA, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        //block entities
+        blockStateModelGenerator.registerSimpleState(ModBlocks.GEM_POLISHING_STATION);
+
     }
 
     @Override

@@ -17,8 +17,6 @@
   "item.tutorialmod.corn": "Corn ",
   "item.tutorialmod.corn_seeds": "Corn Seeds",
 
-  "block.tutorialmod.dahlia": "Dahlia",
-
   "item.tutorialmod.metal_detector": "Metal Detector",
 
   "item.tutorialmod.tomato": "Tomato",
@@ -52,6 +50,10 @@
   "block.tutorialmod.ruby_trapdoor": "Ruby Trapdoor",
 
   "block.tutorialmod.sound_block": "Sound Block",
+
+  "block.tutorialmod.dahlia": "Dahlia",
+
+  "block.tutorialmod.gem_polishing_station": "Gem Polishing Station",
 
   "entity.minecraft.villager.sound_master": "Soundmaster",
 

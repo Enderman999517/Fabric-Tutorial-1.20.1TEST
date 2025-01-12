@@ -2,6 +2,7 @@ package net.enderman999517.tutorialmod.block;
 
 import net.enderman999517.tutorialmod.TutorialMod;
 import net.enderman999517.tutorialmod.block.custom.CornCropBlock;
+import net.enderman999517.tutorialmod.block.custom.GemPolishingStationBlock;
 import net.enderman999517.tutorialmod.block.custom.SoundBlock;
 import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
 import net.enderman999517.tutorialmod.sound.ModSounds;
@@ -72,6 +73,10 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque(), BlockSetType.IRON));
     public static final Block RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque(), BlockSetType.IRON));
+
+    //block entities
+    public static final Block GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            new GemPolishingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block){
