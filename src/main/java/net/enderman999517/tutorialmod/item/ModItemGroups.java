@@ -72,6 +72,12 @@ public class ModItemGroups {
                         entries.add(ModItems.TOMATO_SEEDS);
                         entries.add(ModItems.CORN_SEEDS);
 
+                        //music discs
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
+
+                        //spawn eggs
+                        entries.add(ModItems.PORCUPINE_SPAWN_EGG);
+
                         //random
                         entries.add(Items.DIAMOND);
 

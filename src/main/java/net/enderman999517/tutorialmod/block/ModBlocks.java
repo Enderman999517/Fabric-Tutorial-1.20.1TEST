@@ -4,6 +4,7 @@ import net.enderman999517.tutorialmod.TutorialMod;
 import net.enderman999517.tutorialmod.block.custom.CornCropBlock;
 import net.enderman999517.tutorialmod.block.custom.SoundBlock;
 import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
+import net.enderman999517.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -49,7 +50,7 @@ public class ModBlocks {
 
     //custom
     public static final Block SOUND_BLOCK = registerBlock("sound_block",
-            new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     //stairs and stuff
     public static final Block RUBY_STAIRS = registerBlock("ruby_stairs",

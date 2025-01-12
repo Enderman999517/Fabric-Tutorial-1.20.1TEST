@@ -28,6 +28,11 @@
 
   "item.tutorialmod.ruby_staff": "Ruby Staff",
 
+  "item.tutorialmod.bar_brawl_music_disc": "Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "item.tutorialmod.porcupine_spawn_egg": "Spawn Porcupine",
+
   "block.tutorialmod.ruby_block": "Block of Ruby",
   "block.tutorialmod.raw_ruby_block": "Block of Raw Ruby",
 
@@ -52,5 +57,7 @@
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground!",
 
-  "itemgroup.ruby": "Ruby Tutorial Group"
+  "itemgroup.ruby": "Ruby Tutorial Group",
+
+  "sounds.tutorialmod.metal_detector_found_ore": "Metal Detector Finds Ore"
 }

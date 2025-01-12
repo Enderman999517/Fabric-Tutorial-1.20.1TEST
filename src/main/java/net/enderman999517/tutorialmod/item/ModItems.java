@@ -2,8 +2,10 @@ package net.enderman999517.tutorialmod.item;
 
 import net.enderman999517.tutorialmod.TutorialMod;
 import net.enderman999517.tutorialmod.block.ModBlocks;
+import net.enderman999517.tutorialmod.entity.ModEntities;
 import net.enderman999517.tutorialmod.item.custom.MetalDetectorItem;
 import net.enderman999517.tutorialmod.item.custom.ModArmorItem;
+import net.enderman999517.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -57,6 +59,14 @@ public class ModItems {
     //fuels
     public static final Item COAL_BRIQUETTE = registerItem("coal_briquette",
             new Item(new FabricItemSettings()));
+
+    //music disks
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new MusicDiscItem(7, ModSounds.BAR_BRAWL, new FabricItemSettings().maxCount(1), 122));
+
+    //spawn eggs
+    public static final Item PORCUPINE_SPAWN_EGG = registerItem("porcupine_spawn_egg",
+            new SpawnEggItem(ModEntities.PORCUPINE, 0xa86518, 0x3b260f, new FabricItemSettings()));
 
 
 
