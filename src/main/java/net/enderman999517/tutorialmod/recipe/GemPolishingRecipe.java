@@ -1,4 +1,4 @@
-//package net.enderman999517.tutorialmod.recipe;
+package net.enderman999517.tutorialmod.recipe;//package net.enderman999517.tutorialmod.recipe;
 //
 //import com.google.gson.JsonArray;
 //import com.google.gson.JsonObject;
@@ -111,3 +111,66 @@
 //    }
 //}
 //
+
+import net.enderman999517.tutorialmod.recipe.GemPolishingRecipeSerializer;
+import net.enderman999517.tutorialmod.recipe.GemPolishingRecipeType;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.Recipe;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
+
+public class GemPolishingRecipe implements Recipe<Inventory> {
+    private final Identifier id;
+    private final Ingredient input;
+    private final ItemStack output;
+
+    public GemPolishingRecipe(Identifier id, Ingredient input, ItemStack output) {
+        this.id = id;
+        this.input = input;
+        this.output = output;
+    }
+
+    @Override
+    public boolean matches(Inventory inventory, World world) {
+        return input.test(inventory.getStack(0));
+    }
+
+    @Override
+    public ItemStack craft(Inventory inv, DynamicRegistryManager registryManager) {
+        return output.copy();
+    }
+
+    @Override
+    public boolean fits(int width, int height) {
+        return true;
+    }
+
+    @Override
+    public ItemStack getOutput(DynamicRegistryManager registryManager) {
+        return output.copy();
+    }
+
+    @Override
+    public Identifier getId() {
+        return id;
+    }
+
+    @Override
+    public RecipeSerializer<?> getSerializer() {
+        return GemPolishingRecipeSerializer.INSTANCE;
+    }
+
+    @Override
+    public RecipeType<?> getType() {
+        return GemPolishingRecipeType.INSTANCE;
+    }
+
+    public Ingredient getInput() {
+        return input;
+    }
+}

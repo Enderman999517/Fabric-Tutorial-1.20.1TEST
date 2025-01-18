@@ -7,6 +7,7 @@ import net.enderman999517.tutorialmod.entity.custom.PorcupineEntity;
 import net.enderman999517.tutorialmod.item.ModItemGroups;
 import net.enderman999517.tutorialmod.item.ModItems;
 //import net.enderman999517.tutorialmod.recipe.ModRecipes;
+import net.enderman999517.tutorialmod.recipe.ModRecipes;
 import net.enderman999517.tutorialmod.screen.ModScreenHandlers;
 import net.enderman999517.tutorialmod.sound.ModSounds;
 import net.enderman999517.tutorialmod.util.ModCustomTrades;
@@ -43,7 +44,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModScreenHandlers.registerScreenHandlers();
 
-		//ModRecipes.registerRecipes();
+		ModRecipes.register();
 
 		ModLootTableModifiers.modifyLootTables();
 

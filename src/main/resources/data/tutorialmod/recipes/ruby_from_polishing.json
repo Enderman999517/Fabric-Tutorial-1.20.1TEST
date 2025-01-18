@@ -2,7 +2,7 @@
   "type": "tutorialmod:gem_polishing",
   "ingredients": [
     {
-      "item": "tutorialmod:raw_ruby"
+      "item": "minecraft:coal"
     }
   ],
   "output": {

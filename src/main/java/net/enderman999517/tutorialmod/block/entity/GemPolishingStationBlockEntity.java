@@ -1,6 +1,8 @@
 package net.enderman999517.tutorialmod.block.entity;
 
 import net.enderman999517.tutorialmod.item.ModItems;
+import net.enderman999517.tutorialmod.recipe.GemPolishingRecipe;
+import net.enderman999517.tutorialmod.recipe.GemPolishingRecipeType;
 import net.enderman999517.tutorialmod.screen.GemPolishingScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -12,6 +14,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.RecipeManager;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -20,6 +24,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GemPolishingStationBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -153,6 +159,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
     private boolean isOutputSlotEmptyOrReceivable() {
         return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
     }
+
 }
 
 
