@@ -1,8 +1,6 @@
 package net.enderman999517.tutorialmod.block.entity;
 
-import net.enderman999517.tutorialmod.item.ModItems;
 import net.enderman999517.tutorialmod.recipe.GemPolishingRecipe;
-import net.enderman999517.tutorialmod.recipe.GemPolishingRecipeType;
 import net.enderman999517.tutorialmod.screen.GemPolishingScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -10,12 +8,14 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.RecipeManager;
-import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -26,6 +26,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
+
+// custom recipe by koal4git on GitHub and the help of the kaupenjoe discord
 
 public class GemPolishingStationBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -62,6 +64,20 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
                 return 2;
             }
         };
+    }
+
+    public ItemStack getRenderStack() {
+        if(this.getStack(OUTPUT_SLOT).isEmpty()) {
+            return this.getStack(INPUT_SLOT);
+        } else {
+            return this.getStack(OUTPUT_SLOT);
+        }
+    }
+
+    @Override
+    public void markDirty() {
+        world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+        super.markDirty();
     }
 
     @Override
@@ -126,13 +142,6 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
         this.progress = 0;
     }
 
-    private void craftItem() {
-        this.removeStack(INPUT_SLOT, 1);
-        ItemStack result = new ItemStack(ModItems.RUBY);
-
-        this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
-    }
-
     private boolean hasCraftingFinished() {
         return progress >= maxProgress;
     }
@@ -141,11 +150,34 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
         progress++;
     }
 
-    private boolean hasRecipe() {
-        ItemStack result = new ItemStack(ModItems.RUBY);
-        boolean hasInput = getStack(INPUT_SLOT).getItem() == ModItems.RAW_RUBY;
+    private void craftItem() {
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getOutput(null);
 
-        return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
+        this.removeStack(INPUT_SLOT, 1);
+
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().getOutput(null).getItem(),
+                getStack(OUTPUT_SLOT).getCount() + recipe.get().getOutput(null).getCount()));
+    }
+
+    private boolean hasRecipe() {
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+
+        if(recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack result = recipe.get().getOutput(getWorld().getRegistryManager());
+
+        return canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
+    }
+
+    private Optional<GemPolishingRecipe> getCurrentRecipe() {
+        SimpleInventory inv = new SimpleInventory(this.size());
+        for(int i=0; i < this.size(); i++) {
+            inv.setStack(i, this.getStack(i));
+        }
+
+        return getWorld().getRecipeManager().getFirstMatch(GemPolishingRecipe.Type.INSTANCE, inv, getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -160,6 +192,16 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
         return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
     }
 
+    @Nullable
+    @Override
+    public Packet<ClientPlayPacketListener> toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create(this);
+    }
+
+    @Override
+    public NbtCompound toInitialChunkDataNbt() {
+        return createNbt();
+    }
 }
 
 
