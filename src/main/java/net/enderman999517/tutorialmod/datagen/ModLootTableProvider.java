@@ -6,10 +6,12 @@ import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
 import net.enderman999517.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.SignItem;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.AnyOfLootCondition;
@@ -91,7 +93,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         //signs
         //addDrop(ModBlocks.WALL_CHESTNUT_SIGN, new SignItem(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN).dropsLike(ModBlocks.STANDING_CHESTNUT_SIGN)));
-        addDrop(ModBlocks.WALL_CHESTNUT_SIGN, new SignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN), new WoodType("chestnut", new BlockSetType("chestnut"))));
+        addDrop(ModBlocks.WALL_CHESTNUT_SIGN);
 
 
     }
