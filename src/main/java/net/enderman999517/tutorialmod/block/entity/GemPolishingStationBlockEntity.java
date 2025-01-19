@@ -66,14 +66,6 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
         };
     }
 
-    public ItemStack getRenderStack() {
-        if(this.getStack(OUTPUT_SLOT).isEmpty()) {
-            return this.getStack(INPUT_SLOT);
-        } else {
-            return this.getStack(OUTPUT_SLOT);
-        }
-    }
-
     @Override
     public void markDirty() {
         world.updateListeners(pos, getCachedState(), getCachedState(), 3);
@@ -87,6 +79,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
 
     @Override
     public Text getDisplayName() {
+        //best to do Text.translatable
         return Text.literal("Gem Polishing Station");
     }
 

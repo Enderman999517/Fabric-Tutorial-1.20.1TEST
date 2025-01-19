@@ -19,9 +19,8 @@ public class GemPolishingDisplay extends BasicDisplay {
 
     public GemPolishingDisplay(GemPolishingRecipe recipe) {
         //super(getInputList(recipe), List.of(EntryIngredients.of(recipe.getOutput(null))));
-        super(getInputList(recipe), List.of(EntryIngredient.of(EntryStacks.of(recipe.getOutput(null)))));
+        super(getInputList(recipe), List.of(EntryIngredients.of(recipe.getOutput(null))));
     }
-
 
     private static List<EntryIngredient> getInputList(GemPolishingRecipe recipe) {
         if (recipe == null) return Collections.emptyList();
@@ -29,6 +28,7 @@ public class GemPolishingDisplay extends BasicDisplay {
         list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(0)));
         return list;
     }
+
 
     @Override
     public CategoryIdentifier<?> getCategoryIdentifier() {

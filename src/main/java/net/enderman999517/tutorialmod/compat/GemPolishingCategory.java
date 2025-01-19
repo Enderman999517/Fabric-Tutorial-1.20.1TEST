@@ -33,7 +33,7 @@ public class GemPolishingCategory implements DisplayCategory<BasicDisplay> {
 
     @Override
     public Text getTitle() {
-        //best to replace with translatable
+        //best to replace with Text.translatable
         return Text.literal("Gem Polishing Station");
     }
 
