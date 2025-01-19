@@ -90,6 +90,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHESTNUT_LEAVES);
                         entries.add(ModBlocks.CHESTNUT_PLANKS);
 
+                        //signs
+                        entries.add(ModItems.CHESTNUT_SIGN);
+                        entries.add(ModItems.HANGING_CHESTNUT_SIGN);
+
                         //random
                         entries.add(Items.DIAMOND);
 

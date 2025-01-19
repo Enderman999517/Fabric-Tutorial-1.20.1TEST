@@ -6,9 +6,11 @@ import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
 import net.enderman999517.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.SignItem;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.AnyOfLootCondition;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
@@ -18,6 +20,7 @@ import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.util.Identifier;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
@@ -58,6 +61,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
 
         //drops when age = 7 or 8
+        //
         AnyOfLootCondition.Builder builder2 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()
                                 .exactMatch(CornCropBlock.AGE, 7))
@@ -66,6 +70,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CORN_CROP, cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEEDS, builder2));
 
         //only drops when age = 8
+        //
         // BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()
         //         .exactMatch(CornCropBlock.AGE, 8));
 
@@ -83,6 +88,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         //leaves
         addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, ModBlocks.RUBY_SLAB, 0.025f)); //TODO
+
+        //signs
+        //addDrop(ModBlocks.WALL_CHESTNUT_SIGN, new SignItem(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN).dropsLike(ModBlocks.STANDING_CHESTNUT_SIGN)));
+        addDrop(ModBlocks.WALL_CHESTNUT_SIGN, new SignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN), new WoodType("chestnut", new BlockSetType("chestnut"))));
 
 
     }

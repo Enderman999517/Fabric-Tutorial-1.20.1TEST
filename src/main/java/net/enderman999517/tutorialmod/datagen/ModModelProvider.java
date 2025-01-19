@@ -62,7 +62,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.CHESTNUT_LOG).log(ModBlocks.CHESTNUT_LOG).wood(ModBlocks.CHESTNUT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CHESTNUT_LOG).log(ModBlocks.STRIPPED_CHESTNUT_LOG).wood(ModBlocks.STRIPPED_CHESTNUT_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHESTNUT_LEAVES);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHESTNUT_PLANKS); //TODO
+
+        BlockStateModelGenerator.BlockTexturePool chestnut_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHESTNUT_PLANKS);
+        chestnut_pool.family(ModBlocks.CHESTNUT_FAMILY);
 
     }
 
@@ -102,6 +104,9 @@ public class ModModelProvider extends FabricModelProvider {
         //spawn eggs
         itemModelGenerator.register(ModItems.PORCUPINE_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+
+        //signs
+        itemModelGenerator.register(ModItems.HANGING_CHESTNUT_SIGN, Models.GENERATED);
 
     }
 }
