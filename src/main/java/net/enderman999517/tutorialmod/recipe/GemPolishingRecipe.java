@@ -12,7 +12,7 @@ import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-// custom recipe by koal4git on GitHub and the help of the kaupenjoe discord
+// custom recipe by koal4git on GitHub and the help of the kaupenjoe discord https://github.com/koal4git/kgems-template-1.20.x
 
 public class GemPolishingRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;

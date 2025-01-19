@@ -24,7 +24,7 @@
 		"fabric-datagen": [
 			"net.enderman999517.tutorialmod.TutorialModDataGenerator"
 		],
-		"rei_client" : [
+		"rei_client": [
 			"net.enderman999517.tutorialmod.compat.TutorialModREIClientPlugin"
 		]
 	},

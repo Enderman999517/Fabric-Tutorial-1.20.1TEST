@@ -33,6 +33,7 @@ public class GemPolishingCategory implements DisplayCategory<BasicDisplay> {
 
     @Override
     public Text getTitle() {
+        //best to replace with translatable
         return Text.literal("Gem Polishing Station");
     }
 
@@ -51,7 +52,7 @@ public class GemPolishingCategory implements DisplayCategory<BasicDisplay> {
                 .entries(display.getInputEntries().get(0)));
 
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 80, startPoint.y + 59))
-                .markOutput().entries(display.getOutputEntries().get(1)));
+                .markOutput().entries(display.getOutputEntries().get(0)));
 
         return widgets;
     }
