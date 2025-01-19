@@ -36,6 +36,21 @@ public class ModBlocks {
     public static final Block END_STONE_RUBY_ORE = registerBlock("end_stone_ruby_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(4f), UniformIntProvider.create(4, 7)));
 
+    //wood stuff
+    public static final Block CHESTNUT_LOG = registerBlock("chestnut_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(3f)));
+    public static final Block CHESTNUT_WOOD = registerBlock("chestnut_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(3f)));
+    public static final Block STRIPPED_CHESTNUT_LOG = registerBlock("stripped_chestnut_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final Block STRIPPED_CHESTNUT_WOOD = registerBlock("stripped_chestnut_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final Block CHESTNUT_PLANKS = registerBlock("chestnut_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(3f)));
+    public static final Block CHESTNUT_LEAVES = registerBlock("chestnut_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f).nonOpaque()));
+
     //crops
     public static final Block TOMATO_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "tomato_crop"),
             new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));

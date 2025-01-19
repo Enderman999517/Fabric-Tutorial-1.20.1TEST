@@ -57,6 +57,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TOMATO_CROP, cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO, ModItems.TOMATO_SEEDS, builder));
 
 
+        //drops when age = 7 or 8
         AnyOfLootCondition.Builder builder2 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()
                                 .exactMatch(CornCropBlock.AGE, 7))
@@ -64,6 +65,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                  .exactMatch(CornCropBlock.AGE, 8)));
         addDrop(ModBlocks.CORN_CROP, cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEEDS, builder2));
 
+        //only drops when age = 8
         // BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()
         //         .exactMatch(CornCropBlock.AGE, 8));
 
@@ -71,6 +73,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         //flowers
         addDrop(ModBlocks.DAHLIA);
         addPottedPlantDrops(ModBlocks.POTTED_DAHLIA);
+
+        //logs
+        addDrop(ModBlocks.CHESTNUT_LOG);
+        addDrop(ModBlocks.STRIPPED_CHESTNUT_LOG);
+        addDrop(ModBlocks.CHESTNUT_WOOD);
+        addDrop(ModBlocks.STRIPPED_CHESTNUT_WOOD);
+        addDrop(ModBlocks.CHESTNUT_PLANKS);
+
+        //leaves
+        addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, ModBlocks.RUBY_SLAB, 0.025f)); //TODO
 
 
     }

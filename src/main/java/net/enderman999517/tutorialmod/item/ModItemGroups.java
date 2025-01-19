@@ -81,6 +81,15 @@ public class ModItemGroups {
                         //block entities
                         entries.add(ModBlocks.GEM_POLISHING_STATION);
 
+                        //wood stuff
+                        entries.add(ModBlocks.CHESTNUT_LOG);
+                        entries.add(ModBlocks.STRIPPED_CHESTNUT_LOG);
+                        entries.add(ModBlocks.CHESTNUT_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CHESTNUT_WOOD);
+
+                        entries.add(ModBlocks.CHESTNUT_LEAVES);
+                        entries.add(ModBlocks.CHESTNUT_PLANKS);
+
                         //random
                         entries.add(Items.DIAMOND);
 

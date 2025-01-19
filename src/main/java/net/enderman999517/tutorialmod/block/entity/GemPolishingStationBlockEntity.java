@@ -66,6 +66,16 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Exten
         };
     }
 
+
+    //doesn't render new item until player opens blockentity but works when inverting input and output slots for some reason
+    public ItemStack getRenderStack() {
+        if (this.getStack(INPUT_SLOT).isEmpty()){
+            return this.getStack(OUTPUT_SLOT);
+        } else {
+            return this.getStack(INPUT_SLOT);
+        }
+    }
+
     @Override
     public void markDirty() {
         world.updateListeners(pos, getCachedState(), getCachedState(), 3);
