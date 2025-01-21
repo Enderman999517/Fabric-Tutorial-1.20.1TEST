@@ -43,7 +43,6 @@ public class DiceProjectileEntity extends ThrownItemEntity {
             this.getWorld().sendEntityStatus(this, (byte)3);
             this.getWorld().setBlockState(getBlockPos(), ((DiceBlock) ModBlocks.DICE_BLOCK).getRandomBlockState(), 3);
         }
-
         this.discard();
         super.onBlockHit(blockHitResult);
     }
