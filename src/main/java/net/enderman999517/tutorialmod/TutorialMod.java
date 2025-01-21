@@ -1,8 +1,8 @@
 package net.enderman999517.tutorialmod;
 
-import dev.architectury.platform.Mod;
 import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.enderman999517.tutorialmod.block.entity.ModBlockEntities;
+import net.enderman999517.tutorialmod.entity.ModBoats;
 import net.enderman999517.tutorialmod.entity.ModEntities;
 import net.enderman999517.tutorialmod.entity.custom.PorcupineEntity;
 import net.enderman999517.tutorialmod.item.ModItemGroups;
@@ -63,5 +63,8 @@ public class TutorialMod implements ModInitializer {
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHESTNUT_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHESTNUT_LEAVES, 30, 60);
+
+		ModBoats.registerBoats();
+
 	}
 }

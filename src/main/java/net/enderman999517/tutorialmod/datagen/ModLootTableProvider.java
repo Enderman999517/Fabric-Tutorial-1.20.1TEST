@@ -91,9 +91,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         //leaves
         addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, ModBlocks.RUBY_SLAB, 0.025f)); //TODO
 
-        //signs
-        //addDrop(ModBlocks.WALL_CHESTNUT_SIGN, new SignItem(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN).dropsLike(ModBlocks.STANDING_CHESTNUT_SIGN)));
+        //signs (can either add 1 type of each sign here and do .dropsLike in ModBlocks or just put both types of each sign here)
+        //RUN DATAGEN PLEASE OTHERWISE IT WON'T WORK
         addDrop(ModBlocks.WALL_CHESTNUT_SIGN);
+        addDrop(ModBlocks.STANDING_CHESTNUT_SIGN);
+        addDrop(ModBlocks.HANGING_CHESTNUT_SIGN);
+        addDrop(ModBlocks.WALL_HANGING_CHESTNUT_SIGN);
 
 
     }

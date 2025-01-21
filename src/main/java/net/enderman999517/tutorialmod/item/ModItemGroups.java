@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_RUBY);
                         entries.add(ModItems.METAL_DETECTOR);
                         entries.add(ModItems.RUBY_STAFF);
+                        entries.add(ModItems.DICE);
 
                         //tools
                         entries.add(ModItems.RUBY_PICKAXE);
@@ -93,6 +94,10 @@ public class ModItemGroups {
                         //signs
                         entries.add(ModItems.CHESTNUT_SIGN);
                         entries.add(ModItems.HANGING_CHESTNUT_SIGN);
+
+                        //boats
+                        entries.add(ModItems.CHESTNUT_BOAT);
+                        entries.add(ModItems.CHESTNUT_CHEST_BOAT);
 
                         //random
                         entries.add(Items.DIAMOND);

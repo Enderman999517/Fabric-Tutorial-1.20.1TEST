@@ -1,8 +1,11 @@
 package net.enderman999517.tutorialmod.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.enderman999517.tutorialmod.TutorialMod;
 import net.enderman999517.tutorialmod.block.ModBlocks;
+import net.enderman999517.tutorialmod.entity.ModBoats;
 import net.enderman999517.tutorialmod.entity.ModEntities;
+import net.enderman999517.tutorialmod.item.custom.DiceItem;
 import net.enderman999517.tutorialmod.item.custom.MetalDetectorItem;
 import net.enderman999517.tutorialmod.item.custom.ModArmorItem;
 import net.enderman999517.tutorialmod.sound.ModSounds;
@@ -23,6 +26,7 @@ public class ModItems {
             new MetalDetectorItem(new FabricItemSettings().maxDamage(64)));
     public static final Item RUBY_STAFF = registerItem("ruby_staff",
             new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item DICE = registerItem("dice", new DiceItem(new FabricItemSettings()));
 
     //tools
     public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe",
@@ -73,6 +77,10 @@ public class ModItems {
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.STANDING_CHESTNUT_SIGN, ModBlocks.WALL_CHESTNUT_SIGN));
     public static final Item HANGING_CHESTNUT_SIGN = registerItem("chestnut_hanging_sign",
             new HangingSignItem(ModBlocks.HANGING_CHESTNUT_SIGN, ModBlocks.WALL_HANGING_CHESTNUT_SIGN, new FabricItemSettings().maxCount(16)));
+
+    //boats
+    public static final Item CHESTNUT_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.CHESTNUT_BOAT_ID, ModBoats.CHESTNUT_BOAT_KEY, false);
+    public static final Item CHESTNUT_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.CHESTNUT_CHEST_BOAT_ID, ModBoats.CHESTNUT_BOAT_KEY, true);
 
 
 

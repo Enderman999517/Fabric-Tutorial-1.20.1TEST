@@ -1,9 +1,11 @@
 package net.enderman999517.tutorialmod;
 
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.enderman999517.tutorialmod.block.entity.ModBlockEntities;
 import net.enderman999517.tutorialmod.block.entity.renderer.GemPolishingBlockEntityRenderer;
+import net.enderman999517.tutorialmod.entity.ModBoats;
 import net.enderman999517.tutorialmod.entity.ModEntities;
 import net.enderman999517.tutorialmod.entity.client.ModModelLayers;
 import net.enderman999517.tutorialmod.entity.client.PorcupineModel;
@@ -18,6 +20,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.util.SpriteIdentifier;
 
 public class TutorialModClient implements ClientModInitializer {
@@ -45,5 +48,8 @@ public class TutorialModClient implements ClientModInitializer {
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, ModBlocks.CHESTNUT_SIGN_TEXTURE));
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, ModBlocks.CHESTNUT_HANGING_SIGN_TEXTURE));
 
+        TerraformBoatClientHelper.registerModelLayers(ModBoats.CHESTNUT_BOAT_ID, false);
+
+        EntityRendererRegistry.register(ModEntities.DICE_PROJECTILE, FlyingItemEntityRenderer::new);
     }
 }

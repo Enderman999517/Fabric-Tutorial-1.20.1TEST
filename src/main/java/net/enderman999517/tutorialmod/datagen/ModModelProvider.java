@@ -1,5 +1,6 @@
 package net.enderman999517.tutorialmod.datagen;
 
+import com.mojang.serialization.DataResult;
 import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.enderman999517.tutorialmod.block.custom.CornCropBlock;
 import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
@@ -11,6 +12,8 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -87,6 +90,8 @@ public class ModModelProvider extends FabricModelProvider {
         //items
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.DICE, Models.GENERATED);
+
         //ore materials
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_RUBY, Models.GENERATED);
@@ -107,6 +112,10 @@ public class ModModelProvider extends FabricModelProvider {
 
         //signs
         itemModelGenerator.register(ModItems.HANGING_CHESTNUT_SIGN, Models.GENERATED);
+
+        //boats
+        itemModelGenerator.register(ModItems.CHESTNUT_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHESTNUT_CHEST_BOAT, Models.GENERATED);
 
     }
 }
