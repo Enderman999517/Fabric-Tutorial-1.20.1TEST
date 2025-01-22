@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-21T22:08:35.3122173	Tutorial Mod/Block Loot Tables
+// 1.20.1	2025-01-22T19:26:12.6225348	Tutorial Mod/Block Loot Tables
 db950f79061cd510d38ef3cf7c48d495e66ac082 data\tutorialmod\loot_tables\blocks\chestnut_standing_sign.json
 a77a150c7851fbaf830081a89b0e3371ad62225d data\tutorialmod\loot_tables\blocks\ruby_fence_gate.json
 865399c15f94da491a91fa8bc983868706016198 data\tutorialmod\loot_tables\blocks\ruby_wall.json
@@ -7,7 +7,6 @@ a77a150c7851fbaf830081a89b0e3371ad62225d data\tutorialmod\loot_tables\blocks\rub
 6cbee860a058aff1471e8886d74965f5a072e318 data\tutorialmod\loot_tables\blocks\raw_ruby_block.json
 03a3b82f1a2fb709266d0911c5987cde08a8ef10 data\tutorialmod\loot_tables\blocks\end_stone_ruby_ore.json
 b3340c719a7e5b717cd9ccf26d03d2932423aeff data\tutorialmod\loot_tables\blocks\chestnut_wood.json
-db950f79061cd510d38ef3cf7c48d495e66ac082 data\minecraft\loot_tables\blocks\acacia_sign.json
 d335d1581e2acd1b2179f84a884643db4c61a07e data\tutorialmod\loot_tables\blocks\ruby_pressure_plate.json
 cc949d0a6d37d42537b3f6a8856eca6dfd258e66 data\tutorialmod\loot_tables\blocks\sound_block.json
 62b525cc60879fed99f9e678c1a93d25c0d3bdad data\tutorialmod\loot_tables\blocks\dahlia.json
@@ -28,4 +27,3 @@ e10b58ff9a7f9df85b67b7807d5ae423e7a759f8 data\tutorialmod\loot_tables\blocks\rub
 10efab6566ae1503d35bf6302a55b1e7203fa2e6 data\tutorialmod\loot_tables\blocks\ruby_fence.json
 7c9a48559e7d2f66cab7773aa57bd31ae7034cc1 data\tutorialmod\loot_tables\blocks\stripped_chestnut_wood.json
 01b515238d9fe6e695ccb6cde2add8caa23ef2d1 data\tutorialmod\loot_tables\blocks\deepslate_ruby_ore.json
-f3b29cd84eacfcc2a3035eb6f8dd6d131a0fa6ff data\minecraft\loot_tables\blocks\oak_hanging_sign.json

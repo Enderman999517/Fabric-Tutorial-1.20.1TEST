@@ -13,6 +13,7 @@ import net.enderman999517.tutorialmod.sound.ModSounds;
 import net.enderman999517.tutorialmod.util.ModCustomTrades;
 import net.enderman999517.tutorialmod.util.ModLootTableModifiers;
 import net.enderman999517.tutorialmod.villager.ModVillagers;
+import net.enderman999517.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -65,6 +66,8 @@ public class TutorialMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHESTNUT_LEAVES, 30, 60);
 
 		ModBoats.registerBoats();
+
+		ModWorldGeneration.generateModWorldGen();
 
 	}
 }

@@ -1,8 +1,13 @@
 package net.enderman999517.tutorialmod;
 
 import net.enderman999517.tutorialmod.datagen.*;
+import net.enderman999517.tutorialmod.world.ModConfiguredFeatures;
+import net.enderman999517.tutorialmod.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.world.gen.feature.PlacedFeatures;
 
 public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -15,5 +20,12 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModPoiTagProvider::new);
+		pack.addProvider(ModWorldGenerator::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }
