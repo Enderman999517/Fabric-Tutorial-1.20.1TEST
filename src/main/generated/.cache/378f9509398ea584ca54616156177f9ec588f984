@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-22T19:26:12.6225348	Tutorial Mod/Block Loot Tables
+// 1.20.1	2025-01-24T18:28:05.9685876	Tutorial Mod/Block Loot Tables
 db950f79061cd510d38ef3cf7c48d495e66ac082 data\tutorialmod\loot_tables\blocks\chestnut_standing_sign.json
 a77a150c7851fbaf830081a89b0e3371ad62225d data\tutorialmod\loot_tables\blocks\ruby_fence_gate.json
 865399c15f94da491a91fa8bc983868706016198 data\tutorialmod\loot_tables\blocks\ruby_wall.json
@@ -16,8 +16,8 @@ cc949d0a6d37d42537b3f6a8856eca6dfd258e66 data\tutorialmod\loot_tables\blocks\sou
 f3b29cd84eacfcc2a3035eb6f8dd6d131a0fa6ff data\tutorialmod\loot_tables\blocks\chestnut_hanging_sign.json
 af40d80306717301f6cc60b19c082a4df9ad8c1e data\tutorialmod\loot_tables\blocks\chestnut_log.json
 4bf0bfaf4e6545bdaa95f0e9a62a72e5b62bb9d0 data\tutorialmod\loot_tables\blocks\ruby_stairs.json
-0206435597cd005f1d3c39c0aff4cdd540ece9a7 data\tutorialmod\loot_tables\blocks\chestnut_planks.json
 681956b5e18f7d1d59f004198e5b9ad0c12192e3 data\tutorialmod\loot_tables\blocks\potted_dahlia.json
+0206435597cd005f1d3c39c0aff4cdd540ece9a7 data\tutorialmod\loot_tables\blocks\chestnut_planks.json
 4f767a7637e8a06ab8dc288b173877b52afc87f4 data\tutorialmod\loot_tables\blocks\ruby_button.json
 e33d3bb350076f1fbdaf0ab4e0c5cd5045fc241c data\tutorialmod\loot_tables\blocks\chestnut_leaves.json
 98bb13f065482402d7583c8ef078231b88832ca4 data\tutorialmod\loot_tables\blocks\ruby_slab.json
