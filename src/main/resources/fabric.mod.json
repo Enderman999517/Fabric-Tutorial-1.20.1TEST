@@ -26,6 +26,9 @@
 		],
 		"rei_client": [
 			"net.enderman999517.tutorialmod.compat.TutorialModREIClientPlugin"
+		],
+		"terrablender": [
+			"net.enderman999517.tutorialmod.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

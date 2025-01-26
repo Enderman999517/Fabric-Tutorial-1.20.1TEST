@@ -1,10 +1,10 @@
-// 1.20.1	2025-01-25T16:53:30.4180557	Tutorial Mod/Recipes
+// 1.20.1	2025-01-26T13:36:55.0592358	Tutorial Mod/Recipes
 6eb7fb01b2d19d77ab5a9d7250114b2b6942d971 data\tutorialmod\advancements\recipes\misc\ruby_pressure_plate.json
 c1a3567f63b520f5efe7395d79f6815e355e759f data\tutorialmod\recipes\ruby_from_blasting_ruby_ore.json
 ea3f2fa9245d18a2803d0eb21c54bec74d0924df data\tutorialmod\recipes\ruby_from_blasting_raw_ruby.json
 17664245e3a1b526c165c97f41f043edec4e24f2 data\tutorialmod\recipes\ruby_fence_gate.json
-99ac2fad730948cbfcb4c6637188b2d16f6853ce data\tutorialmod\recipes\ruby_from_smelting_nether_ruby_ore.json
 3090103f705c780184ccebaf0210626b5780c364 data\tutorialmod\recipes\ruby_from_smelting_deepslate_ruby_ore.json
+99ac2fad730948cbfcb4c6637188b2d16f6853ce data\tutorialmod\recipes\ruby_from_smelting_nether_ruby_ore.json
 68d274b6bd0a38ce27e947d3182a794f5c8dcb72 data\tutorialmod\recipes\ruby.json
 f8576b3e21a92155ff72a935364aadca5f73c3c0 data\tutorialmod\advancements\recipes\misc\ruby_from_smelting_deepslate_ruby_ore.json
 2aea1fcafb02195e59da0e4fd8d5abc6fc744728 data\tutorialmod\recipes\ruby_trapdoor.json
