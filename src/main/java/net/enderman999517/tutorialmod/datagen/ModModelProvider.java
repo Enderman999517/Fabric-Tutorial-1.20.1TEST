@@ -1,6 +1,5 @@
 package net.enderman999517.tutorialmod.datagen;
 
-import com.mojang.serialization.DataResult;
 import net.enderman999517.tutorialmod.block.ModBlocks;
 import net.enderman999517.tutorialmod.block.custom.CornCropBlock;
 import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
@@ -12,8 +11,6 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -68,6 +65,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         BlockStateModelGenerator.BlockTexturePool chestnut_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHESTNUT_PLANKS);
         chestnut_pool.family(ModBlocks.CHESTNUT_FAMILY);
+
+        //saplings
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CHESTNUT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
     }
 

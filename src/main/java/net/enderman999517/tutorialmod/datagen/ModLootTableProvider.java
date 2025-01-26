@@ -6,13 +6,9 @@ import net.enderman999517.tutorialmod.block.custom.TomatoCropBlock;
 import net.enderman999517.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.SignItem;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.AnyOfLootCondition;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
@@ -22,7 +18,6 @@ import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
-import net.minecraft.util.Identifier;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
@@ -89,7 +84,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHESTNUT_PLANKS);
 
         //leaves
-        addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, ModBlocks.RUBY_SLAB, 0.025f)); //TODO
+        addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, ModBlocks.CHESTNUT_SAPLING, 0.025f));
+
+        //saplings
+        addDrop(ModBlocks.CHESTNUT_SAPLING);
 
         //signs add 1 type of each sign here and do .dropsLike in ModBlocks
         //RUN DATAGEN PLEASE OTHERWISE IT WON'T WORK

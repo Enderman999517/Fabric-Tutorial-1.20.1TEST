@@ -14,6 +14,8 @@ import net.enderman999517.tutorialmod.util.ModCustomTrades;
 import net.enderman999517.tutorialmod.util.ModLootTableModifiers;
 import net.enderman999517.tutorialmod.villager.ModVillagers;
 import net.enderman999517.tutorialmod.world.gen.ModWorldGeneration;
+import net.enderman999517.tutorialmod.world.tree.ModFoliagePlacerTypes;
+import net.enderman999517.tutorialmod.world.tree.ModTrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -68,6 +70,10 @@ public class TutorialMod implements ModInitializer {
 		ModBoats.registerBoats();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		ModTrunkPlacerTypes.register();
+
+		ModFoliagePlacerTypes.register();
 
 	}
 }

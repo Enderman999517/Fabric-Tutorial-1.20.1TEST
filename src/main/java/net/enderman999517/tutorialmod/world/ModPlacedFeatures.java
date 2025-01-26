@@ -1,6 +1,8 @@
 package net.enderman999517.tutorialmod.world;
 
 import net.enderman999517.tutorialmod.TutorialMod;
+import net.enderman999517.tutorialmod.block.ModBlocks;
+import net.minecraft.entity.ai.brain.task.GiveGiftsToHeroTask;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -9,6 +11,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
@@ -18,6 +22,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
     public static final RegistryKey<PlacedFeature> NETHER_RUBY_ORE_PLACED_KEY = registerKey("nether_ruby_ore_placed");
     public static final RegistryKey<PlacedFeature> END_RUBY_ORE_PLACED_KEY = registerKey("end_ruby_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> CHESTNUT_PLACED_KEY = registerKey("chestnut_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -33,6 +39,10 @@ public class ModPlacedFeatures {
         register(context, END_RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_RUBY_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(30, //veins per chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, CHESTNUT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CHESTNUT_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(10000, 0.5f, 256),
+                        ModBlocks.CHESTNUT_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

@@ -3,7 +3,9 @@
 	"package": "net.enderman999517.tutorialmod.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"TrunkPlacerTypeInvoker",
+		"FoliagePlacerTypeInvoker"
 	],
 	"client": [
 		"ItemRendererAccessor",

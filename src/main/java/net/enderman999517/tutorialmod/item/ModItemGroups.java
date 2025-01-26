@@ -99,6 +99,9 @@ public class ModItemGroups {
                         entries.add(ModItems.CHESTNUT_BOAT);
                         entries.add(ModItems.CHESTNUT_CHEST_BOAT);
 
+                        //saplings
+                        entries.add(ModBlocks.CHESTNUT_SAPLING);
+
                         //random
                         entries.add(Items.DIAMOND);
 

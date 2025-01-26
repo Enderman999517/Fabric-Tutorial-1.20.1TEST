@@ -7,6 +7,7 @@ import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.enderman999517.tutorialmod.TutorialMod;
 import net.enderman999517.tutorialmod.block.custom.*;
 import net.enderman999517.tutorialmod.sound.ModSounds;
+import net.enderman999517.tutorialmod.world.tree.ChestnutSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -116,6 +117,10 @@ public class ModBlocks {
     //block entities
     public static final Block GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
             new GemPolishingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
+    //saplings
+    public static final Block CHESTNUT_SAPLING = registerBlock("chestnut_sapling",
+            new SaplingBlock(new ChestnutSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
 
     private static Block registerBlock(String name, Block block){
